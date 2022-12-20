@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import Weather from "./Weather";
 
@@ -6,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Weather application in ReactJs</h1>
-        <Weather />
+        <Weather city="Brno" />
       </header>
     </div>
   );
