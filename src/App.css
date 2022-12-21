@@ -106,12 +106,15 @@ li:first-letter {
 .Forecast .forecast {
   font-size: 16px;
 }
-.city-information {
-  display: flex;
-  justify-content: space-between;
-}
-.btn-success {
-  width: 135px;
+
+.your-location-button {
+  white-space: nowrap;
   font-size: 13px;
-  padding: 9px 0px;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .your-location-button {
+    font-size: 16px;
+  }
 }

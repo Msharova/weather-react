@@ -24,17 +24,23 @@ export default function WeatherAppBody() {
           </Row>
         </form>
 
-        <div className="city-information">
-          <div className="overview">
-            <h1 className="city">Brno</h1>
-            <ul>
-              <li className="date">Last updated: Wednesday 14:20</li>
-              <li className="description">Light rain</li>
-            </ul>
-          </div>
-          <div className="your-location-button">
-            <Button variant="success">Your location</Button>{" "}
-          </div>
+        <div className="city-information justify-content-lg-center">
+          <Row className="">
+            <Col lg={9} xs={6}>
+              <div className="overview">
+                <h1 className="city">Brno</h1>
+                <ul>
+                  <li className="date">Last updated: Wednesday 14:20</li>
+                  <li className="description">Light rain</li>
+                </ul>
+              </div>
+            </Col>
+            <Col lg={3} xs={6}>
+              <Button className="your-location-button" variant="success">
+                Your location
+              </Button>{" "}
+            </Col>
+          </Row>
         </div>
 
         <div className="CurrentCityParameters row">
