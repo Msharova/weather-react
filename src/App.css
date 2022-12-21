@@ -1,38 +1,117 @@
-.App {
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+h1 {
+  color: #007bff;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #007bff;
+  cursor: pointer;
+}
+small {
+  font-size: 16px;
+}
+a:hover {
+  text-decoration: none;
+}
+li:first-letter {
+  text-transform: capitalize;
+}
+.Footer .footer,
+.Humidity .humidity,
+.Wind .wind-speed,
+.Pressure .pressure,
+.Footer .source-link,
+.Humidity .humidity-param,
+.Wind .wind-speed-param,
+.Pressure .pressure-param,
+.weather-forecast-temp-max {
+  font-weight: bold;
+  color: #007bff;
+}
+.Pressure .pressure-text {
+  white-space: nowrap;
+}
+.overview {
+  margin-bottom: 20px;
+}
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.WeatherAppBody .weather-app {
+  max-width: 600px;
+  margin: 30px auto;
+  margin-bottom: 0;
+  padding: 15px;
+  border: 1px solid #007bff;
+  border-radius: 10px;
+}
+.weather-temperature img {
+  margin-right: 10px;
+  height: 60px;
+  width: 60px;
+}
+#temperature {
+  font-size: 60px;
+  font-weight: bold;
+  color: #4b4d52;
+  line-height: 1;
+}
+#temperature-text {
+  padding: 0px;
+}
+.Units {
+  position: relative;
+  font-size: 15px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+#units-text {
+  padding: 0px;
+}
+.Units .active {
+  color: #4b4d52;
+  cursor: default;
+}
+.Forecast .weather-forecast {
+  text-align: center;
+  margin-top: 15px;
+}
+.forecast-class {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 10px;
+  padding: 0 30px 0 0;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.WeatherAppBody .search-button {
+  text-align: center;
+  padding: 0 10px;
+  white-space: nowrap;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Forecast .forecast {
+  font-size: 16px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.city-information {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-success {
+  width: 135px;
+  font-size: 13px;
+  padding: 9px 0px;
 }
