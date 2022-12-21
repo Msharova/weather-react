@@ -54,7 +54,7 @@ export default function WeatherAppBody() {
                   />
                 </Col>
                 <Col lg={4} xs={4} className="text-right">
-                  <span className="temperature">0</span>
+                  <span className="temperature">-1</span>
                 </Col>
                 <Col lg={4} xs={4} className="units">
                   <a href="./" className="active">
@@ -68,17 +68,17 @@ export default function WeatherAppBody() {
           <Col lg={6} xs={6}>
             <ul>
               <li className="pressure-text">
-                Pressure: <span className="pressure"> 0</span>
+                Pressure: <span className="pressure"> 1016</span>
                 <span className="pressure-param"> mb</span>
               </li>
 
               <li>
-                Humidity: <span className="humidity"> 0</span>
+                Humidity: <span className="humidity"> 93</span>
                 <span className="humidity-param">%</span>
               </li>
 
               <li>
-                Wind: <span className="wind-speed"> 0</span>
+                Wind: <span className="wind-speed"> 2</span>
                 <span className="wind-speed-param"> km/h</span>
               </li>
             </ul>
