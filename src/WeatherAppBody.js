@@ -43,53 +43,49 @@ export default function WeatherAppBody() {
           </Row>
         </div>
 
-        <div className="CurrentCityParameters row">
-          <div className="col-6">
-            <div className="CurrentCityTemperature d-flex weather-temperature">
-              <div className="row">
-                <div className="col-4">
-                  <img src="" alt="" id="icon" />
-                </div>
-                <div className="text-right col-4" id="temperature-text">
-                  <span id="temperature"></span>
-                </div>
-                <div className="text-left col-4" id="units-text">
-                  <span className="Units">
-                    <a href="./" className="active">
-                      °C
-                    </a>
-                    |<a href="./">°F</a>
-                  </span>
-                </div>
-              </div>
+        <Row>
+          <Col lg={6}>
+            <div className="d-flex weather-temperature">
+              <Row>
+                <Col lg={4}>
+                  <img
+                    src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+                    alt="light rain"
+                  />
+                </Col>
+                <Col lg={4} className="text-right">
+                  <span className="temperature">0</span>
+                </Col>
+                <Col lg={4} className="text-left units">
+                  <a href="./" className="active">
+                    °C
+                  </a>
+                  |<a href="./">°F</a>
+                </Col>
+              </Row>
             </div>
-          </div>
-          <div className="Indicators col-6">
+          </Col>
+          <Col lg={6}>
             <ul>
-              <div className="Pressure">
-                <li className="pressure-text">
-                  Pressure: <span className="pressure"> 0</span>
-                  <span className="pressure-param"> mb</span>
-                </li>
-              </div>
-              <div className="Humidity">
-                <li>
-                  Humidity: <span className="humidity"> 0</span>
-                  <span className="humidity-param">%</span>
-                </li>
-              </div>
-              <div className="Wind">
-                <li>
-                  Wind: <span className="wind-speed"> 0</span>
-                  <span className="wind-speed-param"> km/h</span>
-                </li>
-              </div>
+              <li className="pressure-text">
+                Pressure: <span className="pressure"> 0</span>
+                <span className="pressure-param"> mb</span>
+              </li>
+
+              <li>
+                Humidity: <span className="humidity"> 0</span>
+                <span className="humidity-param">%</span>
+              </li>
+
+              <li>
+                Wind: <span className="wind-speed"> 0</span>
+                <span className="wind-speed-param"> km/h</span>
+              </li>
             </ul>
-          </div>
-        </div>
-        <div className="Forecast">
-          <div className="weather-forecast forecast"></div>
-        </div>
+          </Col>
+        </Row>
+
+        <div className="weather-forecast forecast"></div>
       </div>
     </div>
   );

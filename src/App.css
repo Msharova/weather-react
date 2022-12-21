@@ -20,6 +20,7 @@ li {
 a {
   color: #007bff;
   cursor: pointer;
+  text-decoration: none;
 }
 small {
   font-size: 16px;
@@ -31,18 +32,19 @@ li:first-letter {
   text-transform: capitalize;
 }
 .Footer .footer,
-.Humidity .humidity,
-.Wind .wind-speed,
-.Pressure .pressure,
-.Footer .source-link,
-.Humidity .humidity-param,
-.Wind .wind-speed-param,
-.Pressure .pressure-param,
+.humidity,
+.wind-speed,
+.pressure,
+.source-link,
+.humidity-param,
+.wind-speed-param,
+.pressure-param,
 .weather-forecast-temp-max {
   font-weight: bold;
   color: #007bff;
+  text-decoration: none;
 }
-.Pressure .pressure-text {
+.pressure-text {
   white-space: nowrap;
 }
 .overview {
@@ -65,29 +67,29 @@ li:first-letter {
   height: 60px;
   width: 60px;
 }
-#temperature {
+.temperature {
   font-size: 60px;
   font-weight: bold;
   color: #4b4d52;
   line-height: 1;
 }
-#temperature-text {
+.temperature-text {
   padding: 0px;
 }
-.Units {
+.units {
   position: relative;
   font-size: 15px;
   font-weight: bold;
   white-space: nowrap;
 }
-#units-text {
+.units-text {
   padding: 0px;
 }
-.Units .active {
+.active {
   color: #4b4d52;
   cursor: default;
 }
-.Forecast .weather-forecast {
+.weather-forecast {
   text-align: center;
   margin-top: 15px;
 }
@@ -103,7 +105,7 @@ li:first-letter {
   padding: 0 10px;
   white-space: nowrap;
 }
-.Forecast .forecast {
+.forecast {
   font-size: 16px;
 }
 
