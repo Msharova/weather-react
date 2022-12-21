@@ -44,19 +44,19 @@ export default function WeatherAppBody() {
         </div>
 
         <Row>
-          <Col lg={6}>
+          <Col lg={6} xs={6}>
             <div className="d-flex weather-temperature">
               <Row>
-                <Col lg={4}>
+                <Col lg={4} xs={4}>
                   <img
                     src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
                     alt="light rain"
                   />
                 </Col>
-                <Col lg={4} className="text-right">
+                <Col lg={4} xs={4} className="text-right">
                   <span className="temperature">0</span>
                 </Col>
-                <Col lg={4} className="text-left units">
+                <Col lg={4} xs={4} className="units">
                   <a href="./" className="active">
                     °C
                   </a>
@@ -65,7 +65,7 @@ export default function WeatherAppBody() {
               </Row>
             </div>
           </Col>
-          <Col lg={6}>
+          <Col lg={6} xs={6}>
             <ul>
               <li className="pressure-text">
                 Pressure: <span className="pressure"> 0</span>
@@ -85,7 +85,9 @@ export default function WeatherAppBody() {
           </Col>
         </Row>
 
-        <div className="weather-forecast forecast"></div>
+        <div className="weather-forecast forecast border">
+          Forecast is coming...
+        </div>
       </div>
     </div>
   );

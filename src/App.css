@@ -80,6 +80,7 @@ li:first-letter {
   position: relative;
   font-size: 15px;
   font-weight: bold;
+  text-align: start;
   white-space: nowrap;
 }
 .units-text {
