@@ -1,6 +1,7 @@
 import React from "react";
 
 import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature";
 
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -33,24 +34,11 @@ export default function WeatherInfo(props) {
       </div>
       <Row>
         <Col lg={6} xs={6}>
-          <div className="d-flex weather-temperature">
-            <Row>
-              <Col lg={4} xs={4}>
-                <img src={props.info.icon} alt={props.info.description} />
-              </Col>
-              <Col lg={4} xs={4} className="text-right">
-                <span className="temperature">
-                  {Math.round(props.info.temperature)}
-                </span>
-              </Col>
-              <Col lg={4} xs={4} className="units">
-                <a href="./" className="active">
-                  °C
-                </a>
-                |<a href="./">°F</a>
-              </Col>
-            </Row>
-          </div>
+          <WeatherTemperature
+            celsius={props.info.temperature}
+            icon={props.info.icon}
+            description={props.info.description}
+          />
         </Col>
         <Col lg={6} xs={6}>
           <ul>
