@@ -20,7 +20,7 @@ export default function WeatherAppBody(props) {
       pressure: response.data.main.pressure,
       description: response.data.weather[0].description,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      date: response.data.dt * 1000,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -56,7 +56,7 @@ export default function WeatherAppBody(props) {
 
           <div className="city-information justify-content-lg-center">
             <Row className="">
-              <Col lg={9} xs={6}>
+              <Col lg={9} md={9} xs={6}>
                 <div className="overview">
                   <h1 className="city">{weather.name}</h1>
                   <ul>
@@ -69,7 +69,7 @@ export default function WeatherAppBody(props) {
                   </ul>
                 </div>
               </Col>
-              <Col lg={3} xs={6}>
+              <Col lg={3} md={3} xs={6}>
                 <Button className="your-location-button" variant="success">
                   Your location
                 </Button>{" "}
