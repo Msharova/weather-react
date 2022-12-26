@@ -58,7 +58,9 @@ export default function WeatherAppBody(props) {
                 />
               </Col>
               <Col lg={3} xs={4} className="d-grid">
-                <Button variant="primary">Search</Button>{" "}
+                <Button variant="primary" onClick={handleSubmit}>
+                  Search
+                </Button>
               </Col>
             </Row>
           </form>
