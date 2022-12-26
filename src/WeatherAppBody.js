@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -29,7 +29,6 @@ export default function WeatherAppBody(props) {
   }
 
   function citySearch(event) {
-    event.preventDefault();
     setSearch(event.target.value);
   }
 
@@ -54,71 +53,7 @@ export default function WeatherAppBody(props) {
             </Row>
           </form>
 
-          <div className="city-information justify-content-lg-center">
-            <Row className="">
-              <Col lg={9} md={9} xs={6}>
-                <div className="overview">
-                  <h1 className="city">{weather.name}</h1>
-                  <ul>
-                    <li className="date">
-                      Last updated: <FormattedDate date={weather.date} />
-                    </li>
-                    <li className="description text-capitalize">
-                      {weather.description}
-                    </li>
-                  </ul>
-                </div>
-              </Col>
-              <Col lg={3} md={3} xs={6}>
-                <Button className="your-location-button" variant="success">
-                  Your location
-                </Button>{" "}
-              </Col>
-            </Row>
-          </div>
-
-          <Row>
-            <Col lg={6} xs={6}>
-              <div className="d-flex weather-temperature">
-                <Row>
-                  <Col lg={4} xs={4}>
-                    <img src={weather.icon} alt={weather.description} />
-                  </Col>
-                  <Col lg={4} xs={4} className="text-right">
-                    <span className="temperature">
-                      {Math.round(weather.temperature)}
-                    </span>
-                  </Col>
-                  <Col lg={4} xs={4} className="units">
-                    <a href="./" className="active">
-                      °C
-                    </a>
-                    |<a href="./">°F</a>
-                  </Col>
-                </Row>
-              </div>
-            </Col>
-            <Col lg={6} xs={6}>
-              <ul>
-                <li className="pressure-text">
-                  Pressure:{" "}
-                  <span className="pressure"> {weather.pressure}</span>
-                  <span className="pressure-param"> mb</span>
-                </li>
-
-                <li>
-                  Humidity:{" "}
-                  <span className="humidity"> {weather.humidity}</span>
-                  <span className="humidity-param">%</span>
-                </li>
-
-                <li>
-                  Wind: <span className="wind-speed"> {weather.wind}</span>
-                  <span className="wind-speed-param"> km/h</span>
-                </li>
-              </ul>
-            </Col>
-          </Row>
+          <WeatherInfo info={weather} />
 
           <div className="weather-forecast forecast border">
             Forecast is coming...
