@@ -6,14 +6,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 export default function WeatherAppBody(props) {
-  const [ready, setReady] = useState(false);
   const [search, setSearch] = useState(props.defaultCity);
-  const [weather, setWeather] = useState({});
+  const [weather, setWeather] = useState({ ready: false });
 
   function showCityInfo(response) {
-    setReady(true);
-
     setWeather({
+      ready: true,
       name: response.data.name,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
@@ -21,6 +19,7 @@ export default function WeatherAppBody(props) {
       pressure: response.data.main.pressure,
       description: response.data.weather[0].description,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      date: "Wednesday 14:22",
     });
   }
 
@@ -33,7 +32,7 @@ export default function WeatherAppBody(props) {
     setSearch(event.target.value);
   }
 
-  if (ready) {
+  if (weather.ready) {
     return (
       <div className="WeatherAppBody">
         <div className="weather-app">
@@ -60,8 +59,10 @@ export default function WeatherAppBody(props) {
                 <div className="overview">
                   <h1 className="city">{weather.name}</h1>
                   <ul>
-                    <li className="date">Last updated: Wednesday 14:20</li>
-                    <li className="description">{weather.description}</li>
+                    <li className="date">Last updated: {weather.date}</li>
+                    <li className="description text-capitalize">
+                      {weather.description}
+                    </li>
                   </ul>
                 </div>
               </Col>
@@ -78,10 +79,7 @@ export default function WeatherAppBody(props) {
               <div className="d-flex weather-temperature">
                 <Row>
                   <Col lg={4} xs={4}>
-                    <img
-                      src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
-                      alt="light rain"
-                    />
+                    <img src={weather.icon} alt={weather.description} />
                   </Col>
                   <Col lg={4} xs={4} className="text-right">
                     <span className="temperature">
@@ -128,7 +126,8 @@ export default function WeatherAppBody(props) {
   } else {
     let apiKey = `aa27af19e16f8ee065d7861dff9b21a6`;
     let units = `metric`;
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${apiKey}&units=${units}`;
+    let city = search;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
     axios.get(url).then(showCityInfo);
     return "Loading";
