@@ -13,7 +13,7 @@ function App() {
   return (
     <Container fluid="md" className="App">
       <div className="weather-app-wrapper">
-        <WeatherAppBody />
+        <WeatherAppBody defaultCity={"Brno"} />
         <Footer />
       </div>
     </Container>
