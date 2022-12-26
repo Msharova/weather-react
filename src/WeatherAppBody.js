@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -19,7 +20,7 @@ export default function WeatherAppBody(props) {
       pressure: response.data.main.pressure,
       description: response.data.weather[0].description,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      date: "Wednesday 14:22",
+      date: response.data.dt * 1000,
     });
   }
 
@@ -59,7 +60,9 @@ export default function WeatherAppBody(props) {
                 <div className="overview">
                   <h1 className="city">{weather.name}</h1>
                   <ul>
-                    <li className="date">Last updated: {weather.date}</li>
+                    <li className="date">
+                      Last updated: <FormattedDate date={weather.date} />
+                    </li>
                     <li className="description text-capitalize">
                       {weather.description}
                     </li>
