@@ -3,7 +3,6 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
 
-import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -25,11 +24,7 @@ export default function WeatherInfo(props) {
               </ul>
             </div>
           </Col>
-          <Col lg={3} md={3} xs={6}>
-            <Button className="your-location-button" variant="success">
-              Your location
-            </Button>{" "}
-          </Col>
+          <Col lg={3} md={3} xs={6}></Col>
         </Row>
       </div>
       <Row>

@@ -41,6 +41,19 @@ export default function WeatherAppBody(props) {
   function citySearch(event) {
     setSearch(event.target.value);
   }
+  function localSearch(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let apiKey = `aa27af19e16f8ee065d7861dff9b21a6`;
+    let units = `metric`;
+    let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
+    let apiUrlLocal = `${apiEndpoint}lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrlLocal).then(showCityInfo);
+  }
+  function localPosition(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(localSearch);
+  }
 
   if (weather.ready) {
     return (
@@ -60,6 +73,15 @@ export default function WeatherAppBody(props) {
               <Col lg={3} xs={4} className="d-grid">
                 <Button variant="primary" onClick={handleSubmit}>
                   Search
+                </Button>
+              </Col>
+              <Col>
+                <Button
+                  className="your-location-button"
+                  variant="success"
+                  onClick={localPosition}
+                >
+                  Your location
                 </Button>
               </Col>
             </Row>
