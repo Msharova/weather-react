@@ -59,9 +59,9 @@ export default function WeatherAppBody(props) {
     return (
       <div className="WeatherAppBody">
         <div className="weather-app">
-          <form className="mb-4" onSubmit={handleSubmit}>
+          <form className="" onSubmit={handleSubmit}>
             <Row>
-              <Col lg={9} xs={8}>
+              <Col lg={9} md={9} xs={7}>
                 <input
                   type="search"
                   placeholder="Enter city name..."
@@ -70,19 +70,23 @@ export default function WeatherAppBody(props) {
                   onChange={citySearch}
                 />
               </Col>
-              <Col lg={3} xs={4} className="d-grid">
-                <Button variant="primary" onClick={handleSubmit}>
-                  Search
-                </Button>
-              </Col>
-              <Col>
-                <Button
-                  className="your-location-button"
-                  variant="success"
-                  onClick={localPosition}
-                >
-                  Your location
-                </Button>
+
+              <Col lg={3} md={3} xs={5}>
+                <Col lg={12} className="d-grid mb-1">
+                  <Button variant="primary" onClick={handleSubmit}>
+                    Search
+                  </Button>
+                </Col>
+
+                <Col lg={12}>
+                  <Button
+                    className="your-location-button d-grid w-100"
+                    variant="success"
+                    onClick={localPosition}
+                  >
+                    Your location
+                  </Button>
+                </Col>
               </Col>
             </Row>
           </form>

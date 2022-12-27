@@ -22,6 +22,7 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
+
 small {
   font-size: 16px;
 }
@@ -39,12 +40,20 @@ li:first-letter {
 .humidity-param,
 .wind-speed-param,
 .pressure-param,
-.weather-forecast-temp-max {
+.weather-forecast-temp-max,
+.description {
   font-weight: bold;
   color: #007bff;
   text-decoration: none;
 }
-.pressure-text {
+
+.pressure-text,
+.date,
+.description,
+.humidity-param,
+.wind-speed-param,
+.pressure-param,
+.units {
   white-space: nowrap;
 }
 .overview {
@@ -63,10 +72,10 @@ li:first-letter {
   border-radius: 10px;
 }
 .weather-temperature img {
-  margin-right: 10px;
   height: 60px;
   width: 60px;
 }
+
 .temperature {
   font-size: 60px;
   font-weight: bold;
@@ -77,14 +86,8 @@ li:first-letter {
   padding: 0px;
 }
 .units {
-  position: relative;
   font-size: 15px;
   font-weight: bold;
-  text-align: start;
-  white-space: nowrap;
-}
-.units-text {
-  padding: 0px;
 }
 .active {
   color: #4b4d52;
@@ -117,7 +120,17 @@ li:first-letter {
 }
 
 @media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
   .your-location-button {
-    font-size: 16px;
+    font-size: 12px;
+  }
+  .temperature {
+    font-size: 35px;
+  }
+  img {
+    width: 35px;
+    height: 35px;
   }
 }
