@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -92,10 +93,7 @@ export default function WeatherAppBody(props) {
           </form>
 
           <WeatherInfo info={weather} />
-
-          <div className="weather-forecast forecast border">
-            Forecast is coming...
-          </div>
+          <WeatherForecast />
         </div>
       </div>
     );
