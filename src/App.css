@@ -41,7 +41,8 @@ li:first-letter {
 .wind-speed-param,
 .pressure-param,
 .weather-forecast-temp-max,
-.description {
+.description,
+.weekTempDay {
   font-weight: bold;
   color: #007bff;
   text-decoration: none;
@@ -120,6 +121,10 @@ li:first-letter {
   white-space: nowrap;
   font-size: 13px;
   padding: 10px;
+}
+.weekIcon img {
+  width: 38px;
+  height: 38px;
 }
 
 @media (max-width: 600px) {

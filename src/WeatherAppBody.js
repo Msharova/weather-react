@@ -15,6 +15,7 @@ export default function WeatherAppBody(props) {
     setWeather({
       ready: true,
       name: response.data.name,
+      coord: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -93,7 +94,7 @@ export default function WeatherAppBody(props) {
           </form>
 
           <WeatherInfo info={weather} />
-          <WeatherForecast />
+          <WeatherForecast coordinates={weather.coord} />
         </div>
       </div>
     );
