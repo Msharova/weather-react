@@ -11,7 +11,7 @@ export default function WeatherForecastDay(props) {
   }
 
   return (
-    <div className="WeatherForecast">
+    <div className="WeatherForecast border">
       <div className="weekDay">{day()}</div>
       <div className="weekIcon">
         <img src={props.data.icon} alt={props.data.description}></img>
