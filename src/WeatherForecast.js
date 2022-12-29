@@ -12,16 +12,7 @@ export default function WeatherForecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
-    setForecast([
-      {
-        response: response.data.daily,
-        day: response.data.daily[0].dt,
-        icon: `http://openweathermap.org/img/wn/${response.data.daily[0].weather[0].icon}@2x.png`,
-        description: response.data.daily[0].weather[0].description,
-        max: Math.round(response.data.daily[0].temp.max),
-        min: Math.round(response.data.daily[0].temp.min),
-      },
-    ]);
+    setForecast(response.data.daily);
     setLoaded(true);
   }
 
@@ -32,7 +23,7 @@ export default function WeatherForecast(props) {
           {forecast.map(function(forecastDaily, index) {
             if (index < 5) {
               return (
-                <div className="col" key={index}>
+                <div className="col daily-forecast" key={index}>
                   <WeatherForecastDay data={forecastDaily} />
                 </div>
               );
