@@ -48,13 +48,18 @@ export default function WeatherTemperature(props) {
   } else {
     return (
       <Row className="weather-temperature WeatherTemperature">
-        <Col lg={4} md={4} xs={4} className="special">
-          <WeatherIcon code={props.icon} alt={props.description} size={60} />
+        <Col lg={3} md={4} xs={4} className="special">
+          <WeatherIcon
+            className="main-icon"
+            code={props.icon}
+            alt={props.description}
+            size={60}
+          />
         </Col>
-        <Col lg={4} md={4} xs={4} className="special">
+        <Col lg={2} md={4} xs={4} className="special">
           <span className="temperature">{Math.round(fahrenheit())}</span>
         </Col>
-        <Col lg={4} md={4} xs={4} className="units special">
+        <Col lg={2} md={4} xs={4} className="units special">
           <a href="./" onClick={convertToCelcius}>
             °C
           </a>
@@ -63,6 +68,7 @@ export default function WeatherTemperature(props) {
             °F
           </span>
         </Col>
+        <Col lg={5} md={4} xs={4}></Col>
       </Row>
     );
   }
