@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import WeatherIcon from "./WeatherIcon";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -22,7 +23,7 @@ export default function WeatherTemperature(props) {
     return (
       <Row className="weather-temperature WeatherTemperature">
         <Col lg={4} md={4} xs={4} className="special">
-          <img src={props.icon} alt={props.description} />
+          <WeatherIcon code={props.icon} alt={props.description} />
         </Col>
         <Col lg={4} md={4} xs={4} className="special">
           <span className="temperature">{Math.round(props.celsius)}</span>
@@ -42,7 +43,7 @@ export default function WeatherTemperature(props) {
     return (
       <Row className="weather-temperature WeatherTemperature">
         <Col lg={4} md={4} xs={4} className="special">
-          <img src={props.icon} alt={props.description} />
+          <WeatherIcon code={props.icon} alt={props.description} />
         </Col>
         <Col lg={4} md={4} xs={4} className="special">
           <span className="temperature">{Math.round(fahrenheit())}</span>

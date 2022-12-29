@@ -21,7 +21,8 @@ export default function WeatherAppBody(props) {
       wind: response.data.wind.speed,
       pressure: response.data.main.pressure,
       description: response.data.weather[0].description,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
+      //icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: new Date(response.data.dt * 1000),
     });
   }
