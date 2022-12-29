@@ -1,7 +1,7 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherForecastDay(props) {
-  console.log(props);
   function day() {
     let date = new Date(props.data.dt * 1000);
     let day = date.getDay();
@@ -15,9 +15,9 @@ export default function WeatherForecastDay(props) {
     <div className="WeatherForecast">
       <div className="weekDay">{day()}</div>
       <div className="weekIcon">
-        <img
-          src={`http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`}
-          alt={props.data.weather[0].description}
+        <WeatherIcon
+          code={props.data.weather[0].icon}
+          alt={props.description}
         />
       </div>
       <div className="weekTemp">

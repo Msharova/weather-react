@@ -72,7 +72,7 @@ li:first-letter {
   border: 1px solid #007bff;
   border-radius: 10px;
 }
-.weather-temperature img {
+.weather-temperature canvas {
   height: 60px;
   width: 60px;
 }
