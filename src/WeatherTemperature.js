@@ -22,13 +22,18 @@ export default function WeatherTemperature(props) {
   if (unit === "celsius") {
     return (
       <Row className="weather-temperature WeatherTemperature">
-        <Col lg={4} md={4} xs={4} className="special">
-          <WeatherIcon code={props.icon} alt={props.description} />
+        <Col lg={3} md={4} xs={4} className="special">
+          <WeatherIcon
+            className="main-icon"
+            code={props.icon}
+            alt={props.description}
+            size={60}
+          />
         </Col>
-        <Col lg={4} md={4} xs={4} className="special">
+        <Col lg={2} md={4} xs={4} className="special">
           <span className="temperature">{Math.round(props.celsius)}</span>
         </Col>
-        <Col lg={4} md={4} xs={4} className="units special">
+        <Col lg={2} md={4} xs={4} className="units special">
           <span href="./" className="active">
             °C
           </span>
@@ -37,13 +42,14 @@ export default function WeatherTemperature(props) {
             °F
           </a>
         </Col>
+        <Col lg={5} md={4} xs={4}></Col>
       </Row>
     );
   } else {
     return (
       <Row className="weather-temperature WeatherTemperature">
         <Col lg={4} md={4} xs={4} className="special">
-          <WeatherIcon code={props.icon} alt={props.description} />
+          <WeatherIcon code={props.icon} alt={props.description} size={60} />
         </Col>
         <Col lg={4} md={4} xs={4} className="special">
           <span className="temperature">{Math.round(fahrenheit())}</span>

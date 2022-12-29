@@ -18,6 +18,7 @@ export default function WeatherForecastDay(props) {
         <WeatherIcon
           code={props.data.weather[0].icon}
           alt={props.description}
+          size={30}
         />
       </div>
       <div className="weekTemp">
