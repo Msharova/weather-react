@@ -19,6 +19,15 @@ export default function Footer() {
         className="footer"
       >
         <span></span> Maria Sharova
+      </a>{" "}
+      , hosted on{" "}
+      <a
+        href="https://maria-sharova-react-weather.netlify.app/"
+        target="_blank"
+        rel="noreferrer noopener"
+        className="footer"
+      >
+        <span></span> Netlify
       </a>
     </div>
   );
