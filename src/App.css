@@ -127,6 +127,9 @@ li:first-letter {
   width: 38px;
   height: 38px;
 }
+.condensed-text {
+  font-family: "Teko", sans-serif;
+}
 
 @media (max-width: 600px) {
   body {
