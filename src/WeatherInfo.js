@@ -40,7 +40,10 @@ export default function WeatherInfo(props) {
                     Pressure:
                   </Col>
                   <Col lg={6} md={6} xs={6}>
-                    <span className="pressure"> {props.info.pressure}</span>
+                    <span className="pressure condensed-text">
+                      {" "}
+                      {props.info.pressure}
+                    </span>
                     <span className="pressure-param"> mb</span>
                   </Col>
                 </Row>
@@ -52,8 +55,11 @@ export default function WeatherInfo(props) {
                     Humidity:
                   </Col>
                   <Col lg={6} md={6} xs={6}>
-                    <span className="humidity"> {props.info.humidity}</span>
-                    <span className="humidity-param">%</span>
+                    <span className="humidity condensed-text">
+                      {" "}
+                      {props.info.humidity}
+                    </span>
+                    <span className="humidity-param">{"  "}%</span>
                   </Col>
                 </Row>
               </li>
@@ -64,7 +70,10 @@ export default function WeatherInfo(props) {
                     Wind:
                   </Col>
                   <Col lg={6} md={6} xs={6}>
-                    <span className="wind-speed"> {props.info.wind}</span>
+                    <span className="wind-speed condensed-text">
+                      {" "}
+                      {props.info.wind}
+                    </span>
                     <span className="wind-speed-param"> km/h</span>
                   </Col>
                 </Row>

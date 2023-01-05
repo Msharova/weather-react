@@ -31,7 +31,9 @@ export default function WeatherTemperature(props) {
           />
         </Col>
         <Col lg={2} md={4} xs={4} className="special">
-          <span className="temperature">{Math.round(props.celsius)}</span>
+          <span className="temperature condensed-text">
+            {Math.round(props.celsius)}
+          </span>
         </Col>
         <Col lg={2} md={4} xs={4} className="units special">
           <span href="./" className="active">
@@ -57,7 +59,9 @@ export default function WeatherTemperature(props) {
           />
         </Col>
         <Col lg={2} md={4} xs={4} className="special">
-          <span className="temperature">{Math.round(fahrenheit())}</span>
+          <span className="temperature condensed-text">
+            {Math.round(fahrenheit())}
+          </span>
         </Col>
         <Col lg={2} md={4} xs={4} className="units special">
           <a href="./" onClick={convertToCelcius}>
